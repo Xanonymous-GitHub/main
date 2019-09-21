@@ -3,8 +3,8 @@
 /* Author: 林天佑                                                 */
 /* ID: 108820003                                                 */
 /* Date: 2019.09.17                                              */
-/* Purpose:                                                      */
-/* Change History:                                               */
+/* Purpose: Be the best student.                                 */
+/* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
 #include <stdio.h>
 //define a variable that means "math.pi"
