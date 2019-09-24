@@ -4,7 +4,7 @@ while True:
     def cal(n,k):
         if n==1:return k
         return cal(3*n+1,k+1) if n%2 else cal(n/2,k+1)
-    i,j=map(int,s.split())
+    [i,j]=list(map(int,s.split()))
     print(i,j,end=' ')
     if i>j:i,j=j,i
     data=list()
