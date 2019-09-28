@@ -1,8 +1,6 @@
-def tc(value):
+def tc():
     score = int(input())
-    result={
-        '1':lambda:
-    }
+    
 def main():
     _input=input()
     return tc()
