@@ -2,7 +2,7 @@
 ## Original repo from <https://github.com/Xanonymous-GitHub/main>
 ## <span style="color:red;font-size:40px">**TeU-Lin**</span> (@NTUT-108820 & N.P.C.)
 
-<span align="center">![homepagephoto](./src/product_16032_product_shot_wide_image.jpg)</span>
+<span align="center">![homepagephoto](./src/images/product_16032_product_shot_wide_image.jpg)</span>
   <link crossorigin="anonymous" media="all" integrity="sha512-lEwNhIgWxFtdGboTlCciWWGiX2vG3LOojEE671oRJEhnPj6jpmgQTJtpq3O2KBzCcln6RzwfvHlyFaI/oR+RNQ==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-849637ecbd4bd65815cc113d80fee2d4.css" />
 
 ## Released Finish Chapters:
