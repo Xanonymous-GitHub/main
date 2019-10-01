@@ -8,7 +8,8 @@ while True:
     n=int(input())
     #get wrong password
     data=list()
-    for x in range(n):data.append(list(map(int,input().split())))
+    for x in range(n):
+        data.append(list(map(int,input().split())))
     #print the result.
     #tmp=psd
     tmp=[]
