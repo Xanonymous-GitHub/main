@@ -8,6 +8,14 @@
     <body>
         <div id="app">
             <p v-bind:title="message">{{ message }}{{ lsdfjksld }}</p>
+            <div>
+                <li v-for="i in dfk">
+                    {{i.cc}}
+                    {{i.cc}}
+                    {{i.cc}}<button v-on:click="reverseMessage">反转消息</button>
+                </li>
+                <button v-on:click="onclick">反转消息</button>
+            </div>
         </div>
     </body>
     <script>
