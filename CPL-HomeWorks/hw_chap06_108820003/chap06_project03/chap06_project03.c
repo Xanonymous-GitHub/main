@@ -8,9 +8,8 @@
 /*****************************************************************/
 #include<stdio.h>
 int GCD(int a,int b){
-    //Euclidean algorithm (a type of recursion)
-    if(a==0)return b;
-    if(b==0)return a;
+    if(!(a))return b;
+    if(!(b))return a;
     return GCD(b,(a-b*(a/b)));
 }
 int main(int argc,char* argv[]){
@@ -19,10 +18,7 @@ int main(int argc,char* argv[]){
     scanf("%d/%d",&c1,&c2);
     gcd=GCD((c2>c1)?c2:c1,(c2<c1)?c2:c1);
     printf("In lowest terms: ");
-    if(c2==gcd){
-        printf("%d\n",c1/gcd);
-    }else{
-        printf("%d/%d\n",c1/gcd,c2/gcd);
-    }
+    if(c2==gcd) printf("%d\n",c1/gcd);
+    else printf("%d/%d\n",c1/gcd,c2/gcd);
     return 0;
 }

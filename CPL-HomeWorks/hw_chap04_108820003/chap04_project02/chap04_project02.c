@@ -19,6 +19,6 @@ int main(int argc,char* argv[]){
         原百位數除以一百的餘再除以十的商:data%100)/10
         原百位數除以一百的商:data/100
     */
-    printf("%d\n",(data%10)*100+((data%100)/10)*10+data/100);
+    printf("The reversal is: %d\n",(data%10)*100+((data%100)/10)*10+data/100);
     return 0;
 }

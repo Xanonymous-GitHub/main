@@ -17,6 +17,6 @@ int main(int argc,char* argv[]){
         原十位數除以十的餘:data%10
         原十位數除以十的商:data/10 
     */
-    printf("%d\n",(data%10)*10+data/10);
+    printf("The reversal is: %d\n",(data%10)*10+data/10);
     return 0;
 }

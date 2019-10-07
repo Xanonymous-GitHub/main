@@ -15,6 +15,6 @@ int main(int argc,char* argv[]){
     //get the data that user inputed.
     scanf("(%d) %d-%d",&a,&b,&c);
     //output the result.
-    printf("%d.%d.%d",a,b,c);
+    printf("You entered %d.%d.%d",a,b,c);
     return 0;
 }

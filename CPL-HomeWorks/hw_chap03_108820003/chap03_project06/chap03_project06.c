@@ -34,8 +34,8 @@ int main(int argc,char* argv[]){
     c1=a1*b2+a2*b1;
     //_GCD is the Maximum common factor of c1 & c2.
     //The first parameter of the function (GCD) must be greater than the Last one.
-    int _GCD=GCD((c2>c1)?c2:c1,(c2<c1)?c2:c1);
+    //int _GCD=GCD((c2>c1)?c2:c1,(c2<c1)?c2:c1);
     //out put the result (irreducible fraction)
-    printf("%d/%d",c1/_GCD,c2/_GCD);
+    printf("%d/%d",c1,c2);
     return 0;
 }

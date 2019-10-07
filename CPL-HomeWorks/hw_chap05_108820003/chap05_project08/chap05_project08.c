@@ -74,6 +74,6 @@ int main(int argc,char* argv[]){
     cvt(dt[b][0],r1);
     cvt(dt[b][1],r2);
     //印出答案。
-    printf("Closet departure time is %s, arriving at %s\n",r1,r2);
+    printf("Closest departure time is %s, arriving at %s\n",r1,r2);
     return 0;
 }

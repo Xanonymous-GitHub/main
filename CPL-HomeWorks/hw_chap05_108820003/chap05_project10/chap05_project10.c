@@ -8,7 +8,7 @@
 /*****************************************************************/
 #include<stdio.h>
 int main(int argc,char* argv[]){
-    printf("Enter a two-digit number: ");//告知user要輸入什麼
+    printf("Enter numerical grade: ");//告知user要輸入什麼
     int d,e=1;//e為旗標變數
     char s='\0';//s為分類結果
     scanf("%d",&d);//存入變數

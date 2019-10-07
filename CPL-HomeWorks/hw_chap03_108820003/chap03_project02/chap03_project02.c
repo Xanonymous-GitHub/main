@@ -25,6 +25,6 @@ int main(int argc,char* argv[]){
     //output the result.
     printf("Item\tUnit\t\tPurchase\n");
     printf("\tPrice\t\tDate\n");
-    printf("%d\t$ %.2f\t%02d/%02d/%d\n",item_number,unit_price,m,d,y);
+    printf("%d\t$ %.2f\t\t%02d/%02d/%d\n",item_number,unit_price,m,d,y);
     return 0;
 }
