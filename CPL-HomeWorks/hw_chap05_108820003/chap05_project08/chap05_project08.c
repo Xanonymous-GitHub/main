@@ -59,17 +59,24 @@ int main(int argc,char* argv[]){
         {21 q 45,23 q 58}
     };
     m=h q m;//將hh:mm轉換成全分鐘表示模式
-    for (int i = 0; i < (int)sizeof(dt)/(int)sizeof(int)/2; i++)
-    {
+    for (int i = 0; i < (int)sizeof(dt)/(int)sizeof(int)/2; i++){
         /*
             找出和用戶輸入時間差距最小的時刻表出發時間
             如果下一個差距比最小差距更小，
             就把最小差距替換成目前的差距，
             並設定變數b為該位置之索引值
         */
-        int tmp = myAbs(dt[i][0]-m);
+        int tmp=myAbs(dt[i][0]-m);
         if (tmp<a){a=tmp;b=i;}
     }
+    /*
+        經隨概念:題目並未定義最接近之起飛時間是否為同一天，因此必須考慮
+        是否和前一天之最晚時間之距離。
+        對折法：將最晚時間與換日時間點之距離對折至換日時間點之前，以負數表示
+    */
+    int itmp=((int)sizeof(dt)/(int)sizeof(int))/2-1;//時刻表最晚時間之索引值
+    int stmp=myAbs((dt[itmp][0]-(24 q 0))-m);//與對折時間點之距離
+    if (stmp<a){a=stmp;b=itmp;}//若更近，則使用此對折時間點(即為前日最後時間點)
     //依序將depature time和arriving time格式化
     cvt(dt[b][0],r1);
     cvt(dt[b][1],r2);
