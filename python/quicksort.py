@@ -8,4 +8,9 @@ def qs(data):
         if(BFL!=SFR):data[SFR],data[BFL]=data[BFL],data[SFR]
     data[0],data[BFL]=data[BFL],data[0]
     return qs(data[:BFL])+[data[BFL]]+qs(data[BFL+1:])
-print(qs(list(map(int,input().split()))))
+while True:
+    try:n=input()
+    except:break
+    data=qs(list(map(int,input().split())))
+    for x in data:print(x,end=' ')
+    print()
