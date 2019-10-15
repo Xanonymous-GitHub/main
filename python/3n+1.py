@@ -10,3 +10,4 @@ while True:
     data=list()
     for x in range(i,j+1):data.append(cal(x,1))
     print(max(data))
+    print('qwdqwddwdqwdqwdqwdqwdqwdqwdqwdqwdqwdqwdqwdqqwdqwdqwdqwdqwdqwdqwqdqwwdqw')
