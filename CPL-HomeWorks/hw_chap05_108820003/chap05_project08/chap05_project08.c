@@ -13,10 +13,8 @@ int myAbs(int a){
     if (a<0) return -a;
     return a;
 }
-//宣告起飛時間格式化字元陣列(字串)
-char r1[]={'\0','\0',':','\0','\0',' ','\0','.','m','.'};
-//宣告抵達時間格式化字元陣列(字串)
-char r2[]={'\0','\0',':','\0','\0',' ','\0','.','m','.'};
+char r1[]={'\0','\0',':','\0','\0',' ','\0','.','m','.'};//宣告起飛時間格式化字元陣列(字串)
+char r2[]={'\0','\0',':','\0','\0',' ','\0','.','m','.'};//宣告抵達時間格式化字元陣列(字串)
 void cvt(int a, char *r){
     /*->函式說明:將分鐘(整數型別)格式化成"hh:mm <a/p>.m."(字串)。
         先分割傳入的資料分割為 h->小時m->分鐘
@@ -34,8 +32,7 @@ void cvt(int a, char *r){
     r[4]=m%10+'0';
 } 
 int main(int argc,char* argv[]){
-    //告知user要輸入什麼
-    printf("Enter a 24-hour time:　");
+    printf("Enter a 24-hour time : ");//告知user要輸入什麼
     /*
         h,m用來儲存user的輸入資料
         a定義為一極大值,表示最小的用戶輸入資料與時刻表時間的差距
@@ -70,9 +67,8 @@ int main(int argc,char* argv[]){
         if (tmp<a){a=tmp;b=i;}
     }
     /*
-        經隨概念:題目並未定義最接近之起飛時間是否為同一天，因此必須考慮
-        是否和前一天之最晚時間之距離。
-        對折法：將最晚時間與換日時間點之距離對折至換日時間點之前，以負數表示
+        精隨概念:題目並未定義最接近之起飛時間是否為同一天，因此必須考慮與前一天最晚時間之距離。
+        對折法：將最晚時間與換日時間點之距離對折至換日時間點之前，以負數表示。
     */
     int itmp=((int)sizeof(dt)/(int)sizeof(int))/2-1;//時刻表最晚時間之索引值
     int stmp=myAbs((dt[itmp][0]-(24 q 0))-m);//與對折時間點之距離
@@ -80,7 +76,6 @@ int main(int argc,char* argv[]){
     //依序將depature time和arriving time格式化
     cvt(dt[b][0],r1);
     cvt(dt[b][1],r2);
-    //印出答案。
-    printf("Closest departure time is %s, arriving at %s\n",r1,r2);
+    printf("Closest departure time is %s, arriving at %s\n",r1,r2);//印出答案。
     return 0;
 }

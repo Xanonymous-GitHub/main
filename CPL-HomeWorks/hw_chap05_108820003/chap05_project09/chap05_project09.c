@@ -10,9 +10,9 @@
 #define x ^=
 int main(int argc,char* argv[]){
     int m1,d1,y1,m2,d2,y2;//
-    printf("Enter first date (mm/dd/yy):　");//告知user要輸入什麼
+    printf("Enter first date (mm/dd/yy) : ");//告知user要輸入什麼
     scanf("%d/%d/%d",&m1,&d1,&y1);//存入第一筆日期資料
-    printf("Enter second date (mm/dd/yy): ");//告知user要輸入什麼
+    printf("Enter second date (mm/dd/yy) : ");//告知user要輸入什麼
     scanf("%d/%d/%d",&m2,&d2,&y2);//存入第二筆日期資料
     /*
         預設first date < second date

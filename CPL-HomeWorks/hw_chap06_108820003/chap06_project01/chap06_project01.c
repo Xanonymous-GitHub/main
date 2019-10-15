@@ -40,16 +40,28 @@ int main(int argc,char* argv[]){
     max M={-1.7E+308,0};//用來存放最大數字以及最大數字在data的位置
     memset(data,'\0',sizeof(data));//開始前先清空data
     for (int i=0;i<max_input_amount;i++){//此迴圈可讓使用者在筆數達到上限值之前不斷的輸入數字
-        int num_of_digits=0,have_point=0,point_pos=0,pos=0;
+        int num_of_digits=0,have_point=0,point_pos=0,pos=0,negative=0;
         /*
             num_of_digits:紀錄該資料總共有幾位數字，包含小數點和換行符號。
             have_point:旗標變數，紀錄該資料是否存在小數點。
             point_pos:紀錄該資料之小數點位置，若無小數點，則其值等於num_of_digits。
             pos:計算權重時使用，用來紀錄目前計算到哪一位數。
+            negative:旗標變數，紀錄該資料是否小於0。(但是後來發現負數也是結束條件阿...OwO)
         */
         double count=0;//將資料從char轉換到double時的記憶變數。
-        printf("Enter a number: ");//顯示輸入訊息
+        printf("Enter a number : ");//顯示輸入訊息
         fgets(data[i], sizeof(data[i]), stdin);//讀取標準輸入之整行內容，以換行符號作為結束
+
+        /*<拆除此註解與下方註解可啟用負數功能>
+        if(data[i][0]=='-'){
+            //判斷是否是負數。
+            negative=!negative;
+            int tmp_negative_moving_pos=0;
+            do{
+                data[i][tmp_negative_moving_pos++]=data[i][tmp_negative_moving_pos];
+            }while(data[i][tmp_negative_moving_pos]);
+        }*/
+
         while (data[i][num_of_digits]&&data[i][num_of_digits]!='\n'){
             /*
                 開始計算該資料有幾位數，以及小數點位置
@@ -96,7 +108,21 @@ int main(int argc,char* argv[]){
             不可用第一個字元等於0作為結束輸入的條件，因為用戶可能輸入0.1之類的值。
             必須拿到double型別的資料後才可判斷其是否為0。
         */
-        if(!(count))break;//結束輸入的條件
+        if(count<=0.0f)break;//結束輸入的條件
+        //if(!(count))break; //若要開啟負數功能須將上一行替換為本行
+
+        /*<拆除此註解與上方註解可啟用負數功能>
+        if(negative){
+            //若是負數，則結果變號。
+            count*=-1.0f;
+            int tmp_negative_data_pos;
+            while(data[i][tmp_negative_data_pos])
+            tmp_negative_data_pos++;
+            while(tmp_negative_data_pos)
+            data[i][tmp_negative_data_pos--]=data[i][tmp_negative_data_pos];
+            data[i][0]='-';
+        }*/
+
         /*
             max{max_of_count,_index_in_data}
             如果count高於最高紀錄，則刷新紀錄，並儲存其索引值(在data中的位置)

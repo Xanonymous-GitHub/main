@@ -37,6 +37,6 @@ int main(int argc,char* argv[]){
         }
     }
     if(e)printf("Letter grade: %c\n",s);//正常輸出結果
-    if(!(e))printf("Wrong score!\n");//錯誤訊息
+    if(!(e))printf("Error: numerical grade out of range 0-100\n");//錯誤訊息
     return 0;
 }
