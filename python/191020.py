@@ -17,5 +17,5 @@ def main():
     got_number=god_choice()
     #印出結果，先印出項目文字，再印出以空格分開的(int轉str類型)的每一項串列元素
     print('lottery:',' '.join(map(str,got_number)))
-    print('winning:',' '.join(map(str,my_choice(data,got_number))))
+    print('winning:',' '.join(map(str,my_choice(data,got_number).sort())))
 if __name__=='__main__':main()#如果不是被當成模組就執行
