@@ -8,6 +8,8 @@
 /*****************************************************************/
 #include<stdio.h>
 int main(int argc,char* argv[]){
-
+    printf("Enter a positive integer: ");
+    scanf("");
+    printf("Factorial of %d: %d");
     return 0;
 }
