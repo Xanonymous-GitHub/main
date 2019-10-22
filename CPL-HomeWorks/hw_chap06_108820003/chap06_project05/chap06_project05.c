@@ -14,7 +14,7 @@ int main(int argc,char* argv[]) {
 		scanf("%s",data);//讀取輸入
 		printf("Digits reversed : \n");//輸出提示訊息
 		for(int i=len-1;i>=0;i--)//逆向迴圈
-        printf("%c",data[i]);//逆向輸出
+                printf("%c",data[i]);//逆向輸出
 		printf("\n");//換行
     return 0;
 }
