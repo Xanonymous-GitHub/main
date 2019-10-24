@@ -6,16 +6,31 @@
 /* Purpose: Be the best student.                                 */
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
-#include<stdio.h>
-int main(int argc,char* argv[]){
+#include <stdio.h>
+int main(int argc, char *argv[])
+{
     char input[10000];
-    int pos=0;
+    int pos = 0;
     printf("Enter phone number: ");
     fgets(input, sizeof(input), stdin);
-    while(input[pos]){
-        int tmp=input[pos]-'A';
-        if(tmp<=25 && tmp>=0)printf("%d",tmp/3+2);
-        else printf("%c",input[pos]);
+    while (input[pos])
+    {
+        int tmp = input[pos] - 'A';
+        if (tmp <= 25 && tmp >= 0)
+        {
+            if (tmp > 15)
+            {
+                printf("%d", (--tmp) / 3 + 2);
+            }
+            else
+            {
+                printf("%d", tmp / 3 + 2);
+            }
+        }
+        else
+        {
+            printf("%c", input[pos]);
+        }
         pos++;
     }
     return 0;

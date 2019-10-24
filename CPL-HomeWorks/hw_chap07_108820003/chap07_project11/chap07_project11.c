@@ -6,11 +6,13 @@
 /* Purpose: Be the best student.                                 */
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
-#include<stdio.h>
-int main(int argc,char* argv[]){
-    char first[100],last[100];
+#include <stdio.h>
+#include <string.h>
+int main(int argc, char *argv[])
+{
+    char first[100], last[100];
     printf("Enter a first and last name: ");
-    scanf("%s %s",first,last);
-    printf("%s, %c\n",last,first[0]);
+    scanf("%s %s", first, last);
+    printf("%s, %c.\n", last, first[0]);
     return 0;
 }
