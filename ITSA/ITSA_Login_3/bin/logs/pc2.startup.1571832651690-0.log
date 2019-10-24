@@ -1,0 +1,30 @@
+191023 201051.717|CONFIG|main|setFileHandlers|Now logging to /home/xanonymous/vscode/main/ITSA/ITSA_Login_3/bin/logs directory.
+191023 201051.720|INFO|main|info|
+191023 201051.723|INFO|main|info|Version 9.5.3 20180207 (Wednesday, February 7th 2018 04:25 UTC) Java ver 13 build 4653 Linux 5.3.0-050300-lowlatency (amd64) 
+191023 201051.723|INFO|main|startLog|Working directory is /home/xanonymous/vscode/main/ITSA/ITSA_Login_3/bin
+191023 201051.746|INFO|main|startLog|Process id is 22676@trusaidlinux
+191023 201051.747|INFO|main|start|Starting ConnectionManager...
+191023 201051.781|INFO|main|start|Started ConnectionManager
+191023 201051.782|INFO|main|setClientServerAndPort|INIFile File location: file:/home/xanonymous/vscode/main/ITSA/ITSA_Login_3/bin/pc2v9.ini
+191023 201051.783|INFO|main|setClientServerAndPort|setClientServerAndPort 140.116.245.84 parsed as 140.116.245.84 port 50002
+191023 201051.783|INFO|main|info|Contacting server at 140.116.245.84:50002
+191023 201051.784|INFO|main|connectToMyServer|Connecting to 140.116.245.84:50002
+191023 201051.828|INFO|Thread-0|receiveUnencrypted|receiveUnencrypted(TransportWrapper, ConnectionHandlerID=Socket[addr=/140.116.245.84,port=50002,localport=56914]-4656685923750540085)
+191023 201051.844|INFO|Thread-0|receiveUnencrypted|receiveUnencrypted Made a secret key for Socket[addr=/140.116.245.84,port=50002,localport=56914]-4656685923750540085 key is com.sun.crypto.provider.DESKey@fffe7ad7
+191023 201051.844|INFO|Thread-0|getPublicKeyPacket|Generating Unencrypted Public Key Packet
+191023 201051.845|INFO|Thread-0|getPublicKeyPacket|checking key:= SunJCE Diffie-Hellman Public Key:
+y:
+    b36614a6 02174b7b 245a5deb cc16de1a 34ccca49 712df422 037c71a7 3200671b
+    bafc88ab 2d5784cf d5d28c04 72b1083a 9c19d7df 0b4e2144 c796d7c5 d2be23e7
+    6a1a3f27 ba2b8aee 46a3f71c 2fe6842a 80d8cff4 92321df1 74827728 03c5ff6c
+    47e0dced c57e8af0 d51b6749 80ebde46 36bd0e9f a202fedd 95e3234d 68ef0286
+p:
+    f488fd58 4e49dbcd 20b49de4 9107366b 336c380d 451d0f7c 88b31c7c 5b2d8ef6
+    f3c923c0 43f0a55b 188d8ebb 558cb85d 38d334fd 7c175743 a31d186c de33212c
+    b52aff3c e1b12940 18118d7c 84a70a72 d686c403 19c80729 7aca950c d9969fab
+    d00a509b 0246d308 3d66a45d 419f9c7c bd894b22 1926baab a25ec355 e92f78c7
+g:
+    02
+l:
+    512
+191023 201051.846|INFO|Thread-0|getPublicKeyPacket|packet:= edu.csus.ecs.pc2.core.transport.TransportWrapper@1e476240

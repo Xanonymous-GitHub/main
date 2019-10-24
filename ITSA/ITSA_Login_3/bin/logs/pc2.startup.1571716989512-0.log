@@ -1,0 +1,20 @@
+191022 120309.526|CONFIG|main|setFileHandlers|Now logging to C:\Users\OWNER\Desktop\ITSA_Login_1\bin\logs directory.
+191022 120309.527|INFO|main|info|
+191022 120309.530|INFO|main|info|Version 9.5.3 20180207 (Wednesday, February 7th 2018 04:25 UTC) Java ver 1.8.0_45 build 4653 Windows 8.1 6.3 (amd64) 
+191022 120309.531|INFO|main|startLog|Working directory is C:\Users\OWNER\Desktop\ITSA_Login_1\bin
+191022 120309.547|INFO|main|startLog|Process id is 11856@DESKTOP-L4NNKGV
+191022 120309.547|INFO|main|start|Starting ConnectionManager...
+191022 120309.893|INFO|main|start|Started ConnectionManager
+191022 120309.897|INFO|main|setClientServerAndPort|INIFile File location: file:/C:/Users/OWNER/Desktop/ITSA_Login_1/bin/pc2v9.ini
+191022 120309.898|INFO|main|setClientServerAndPort|setClientServerAndPort 140.116.82.7 parsed as 140.116.82.7 port 50002
+191022 120309.898|INFO|main|info|Contacting server at 140.116.82.7:50002
+191022 120309.898|INFO|main|connectToMyServer|Connecting to 140.116.82.7:50002
+191022 120330.912|INFO|main|<init>|IO Exception:140.116.82.7
+191022 120330.913|INFO|main|connectToMyServer|Could not ConnectToMyServer()
+191022 120330.913|INFO|main|start|Exception contacting my server 
+|edu.csus.ecs.pc2.core.transport.TransportException: Connection timed out: connect
+|    at edu.csus.ecs.pc2.core.transport.TransportManager.connectToMyServer (TransportManager.java:197)
+|    at edu.csus.ecs.pc2.core.transport.connection.ConnectionManager.connectToMyServer (ConnectionManager.java:99)
+|    at edu.csus.ecs.pc2.core.InternalController.start (InternalController.java:2663)
+|    at edu.csus.ecs.pc2.Starter.main (Starter.java:49)
+191022 120330.913|INFO|main|info|Unable to contact server at 140.116.82.7:0 Connection timed out: connect
