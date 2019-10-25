@@ -19,17 +19,14 @@ int main(int argc, char *argv[])
             {
                 if (r < l)
                     break;
-
                 if (ask >= datas[m - 1])
                     l = m + 1;
                 else
                     r = m - 1;
-
                 m = (r + l) / 2;
             }
             if (datas[l - 1] > ask)
                 l -= 1;
-
             if (l % 2)
                 cout << 1 << endl;
             else
