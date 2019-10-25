@@ -2,7 +2,6 @@ n, k = map(int, input().split())
 d = list(map(int, input().split()))
 f = list(map(int, input().split()))
 for t in f:
-    k -= 1
     l, r = 1, n
     m = (r+l)//2
     while(True):
