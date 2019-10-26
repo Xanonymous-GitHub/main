@@ -9,26 +9,27 @@
 #include <stdio.h>
 int main(int argc, char *argv[])
 {
-    int n = 0;
-    printf("Enter a positive integer: ");
-    scanf("%d", &n);
-    short _short = 1;
-    int _int = 1;
-    long _long = 1;
-    long long _long_long = 1;
-    float _float = 1;
-    double _double = 1;
-    long double _long_double = 1;
-    for (int i = 2; i <= n; i++)
+    int n = 0;                            //被算數
+    printf("Enter a positive integer: "); //顯示提示輸入訊息
+    scanf("%d", &n);                      //取得被算數
+    short _short = 1;                     //建立短整數
+    int _int = 1;                         //建立整數
+    long _long = 1;                       //建立長整數
+    long long _long_long = 1;             //建立超長整數
+    float _float = 1;                     //建立單精度浮點數
+    double _double = 1;                   //建立雙精度浮點數
+    long double _long_double = 1;         //建立長雙精度浮點數
+    for (int i = 2; i <= n; i++)          //計算階乘
     {
-        _short *= (short)i;
-        _int *= (int)i;
-        _long *= (long)i;
-        _long_long *= (long long)i;
-        _float *= (float)i;
-        _double *= (double)i;
-        _long_double *= (long double)i;
+        _short *= (short)i;             //轉換型別，增加階乘
+        _int *= (int)i;                 //轉換型別，增加階乘
+        _long *= (long)i;               //轉換型別，增加階乘
+        _long_long *= (long long)i;     //轉換型別，增加階乘
+        _float *= (float)i;             //轉換型別，增加階乘
+        _double *= (double)i;           //轉換型別，增加階乘
+        _long_double *= (long double)i; //轉換型別，增加階乘
     }
+    //輸出所有結果
     printf("Factorial of %d (short)      : %hd\n", n, _short);
     printf("Factorial of %d (int)        : %d\n", n, _int);
     printf("Factorial of %d (long)       : %ld\n", n, _long);
