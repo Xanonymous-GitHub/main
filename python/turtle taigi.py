@@ -1,6 +1,7 @@
 
 from turtle import *
 
+
 def yin(radius, color1, color2):
     width(3)
     color("black", color1)
@@ -25,12 +26,14 @@ def yin(radius, color1, color2):
     down()
     left(90)
 
+
 def main():
     reset()
     yin(200, "black", "white")
     yin(200, "white", "black")
     ht()
     return "Done!"
+
 
 if __name__ == '__main__':
     main()

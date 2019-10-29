@@ -5,13 +5,13 @@ while True:
         break
     # get user data
     # get original password => psd.
-    psd = list(map(int,list(line)))
+    psd = list(map(int, list(line)))
     # get n
     n = 5
     # get wrong password
     data = list()
     for x in range(n):
-        data.append(list(map(int,list(input()))))
+        data.append(list(map(int, list(input()))))
     # print the result.
     # tmp=psd
     tmp = []

@@ -1,8 +1,9 @@
-#include"cstdio"
-#include"iostream"
+#include "cstdio"
+#include "iostream"
 using namespace std;
-int main(){
+int main()
+{
     system("pause");
-    cout<<"00000000000000";
+    cout << "00000000000000";
     return 0;
 }

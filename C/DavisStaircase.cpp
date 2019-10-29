@@ -3,8 +3,8 @@ using namespace std;
 vector<int> record(37, 0);
 int steps(int data)
 {
-    if(record[data-1] != 0)
-        return record[data-1];
+    if (record[data - 1] != 0)
+        return record[data - 1];
 
     if (data == 1)
         return 1;
@@ -12,7 +12,7 @@ int steps(int data)
         return 2;
     if (data == 3)
         return 4;
-        
+
     return steps(data - 1) + steps(data - 2) + steps(data - 3);
 }
 int main(int argc, char *argv[])
