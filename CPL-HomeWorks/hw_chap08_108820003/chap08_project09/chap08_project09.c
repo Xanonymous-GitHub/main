@@ -7,8 +7,11 @@
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 int main(int argc, char *argv[])
 {
-    
+    srand((unsigned) time(NULL));
+    rand();
     return 0;
 }
