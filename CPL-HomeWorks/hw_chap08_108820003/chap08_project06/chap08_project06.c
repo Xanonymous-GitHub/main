@@ -7,22 +7,21 @@
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
 #include <stdio.h>
-#define upper_distance 'a' - 'A'
+#define upper_distance 'a' - 'A'//大小寫之間的距離
 int main(int argc, char *argv[])
 {
-    char data[32767];
-    int pos = 0;
-    printf("Enter message: ");
-    fgets(data, sizeof(data), stdin);
-    printf("In B1FF-speak: ");
-    while (data[pos]!='\n')
+    char data[32767];//用來儲存輸入的資料
+    int pos = 0;//現在正在處理data中的哪一個字元
+    printf("Enter message: ");//顯示輸入訊息
+    fgets(data, sizeof(data), stdin);//直接取得整行輸入資料
+    printf("In B1FF-speak: ");//顯示輸出訊息
+    while (data[pos]!='\n')//當還沒遇到換行符號時就繼續判斷
     {
-        //printf("%d",upper_distance);
-        if ((data[pos] - 'a') <= 25 && (data[pos] - 'a') >= 0)
+        if ((data[pos] - 'a') <= 25 && (data[pos] - 'a') >= 0)//如果該字元是屬於英文字母且小寫
         {
-            data[pos] -= upper_distance;
+            data[pos] -= upper_distance;//就換成大寫，減掉和大寫之間的距離
         }
-        switch (data[pos])
+        switch (data[pos])//判斷資料中的每個字元，依照題目意思置換字元
         {
         case 'A':
             printf("4");
@@ -42,12 +41,12 @@ int main(int argc, char *argv[])
         case 'S':
             printf("5");
             break;
-        default:
+        default://如果不是題目規定的字元，就輸出原資料
             printf("%c", data[pos]);
             break;
         }
-        pos++;
+        pos++;//位置後移
     }
-    printf("!!!!!!!!!!\n");
+    printf("!!!!!!!!!!\n");//補上10個驚嘆號
     return 0;
-} //Hey dude, C is rilly cool
+}
