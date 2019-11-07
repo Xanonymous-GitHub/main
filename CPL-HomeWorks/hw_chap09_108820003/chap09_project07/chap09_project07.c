@@ -7,16 +7,32 @@
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
 #include <stdio.h>
-int power(){
-    
+int power(int base, int n) //遞迴函式
+{
+    if (n == 0)
+    {
+        return 1; //零次方
+    }
+    if (n == 1)
+    {
+        return base; //1次方
+    }
+    if (n % 2)
+    {
+        return base * power(base, n - 1); //奇數次方
+    }
+    else
+    {
+        return power(base, n / 2) * power(base, n / 2); //偶數次方
+    }
 }
 int main(int argc, char *argv[])
 {
-    int x,n;
-    printf("For x^n, enter x:");
-    scanf("%d",&x);
-    printf("Enter n:");
-    scanf("%d", &n);
-    printf("");
+    int x, n;                                  //宣告變數
+    printf("For x^n, enter x: ");              //輸入訊息
+    scanf("%d", &x);                           //輸入
+    printf("Enter n: ");                       //輸入訊息2
+    scanf("%d", &n);                           //輸入2
+    printf("%d^%d = %d\n", x, n, power(x, n)); //輸出
     return 0;
 }
