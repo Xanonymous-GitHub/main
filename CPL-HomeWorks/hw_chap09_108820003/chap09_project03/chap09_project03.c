@@ -129,13 +129,7 @@ int main(int argc, char *argv[])
 {
     char my_map[10][10];         //總地圖陣列
     srand((unsigned)time(NULL)); //產生亂數種子
-    while (1)//不斷嘗試
-    {
-        if (generate_random_walk(my_map))
-        {
-            break;
-        }
-    }
+    while (!(generate_random_walk(my_map))){} //不斷嘗試
     print_array(my_map);//印出結果
     return 0;
 }
