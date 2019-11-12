@@ -11,16 +11,17 @@ double myPow(int base, int p)
 {
     //由於gcc編譯器編譯pow()函式時須加入-lm參數太過麻煩，因此自製次方函數。
     double result = 1; //初始值
+    int i;
     if (p >= 0)
     {
         //如果次方數為正或0，則用乘法
-        for (int i = 0; i < p; i++)
+        for (i = 0; i < p; i++)
             result *= base;
     }
     else
     {
         //如果次方數為負數，則用除法
-        for (int i = 0; i > p; i--)
+        for (i = 0; i > p; i--)
             result /= base;
     }
     return result;

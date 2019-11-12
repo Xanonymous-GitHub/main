@@ -12,17 +12,17 @@
 #include <string.h>
 int generate_random_walk(char my_map[10][10]) //取得亂數地圖的函式
 {
-    char now = 65;          //現在要填入的英文字母，預設為A
-    int posx = 0, posy = 0; //儲存上一個填寫的位置(分別為x,y)
-    for (int i = 0; i < 10; i++)
+    char now = 65;                //現在要填入的英文字母，預設為A
+    int posx = 0, posy = 0, i, j; //儲存上一個填寫的位置(分別為x,y)
+    for (i = 0; i < 10; i++)
     {
-        for (int j = 0; j < 10; j++)
+        for (j = 0; j < 10; j++)
         {
             my_map[i][j] = 46;
         }
     }
     //memset(my_map, 46, sizeof(my_map)); //清空地圖
-    for (int i = 0; i < 26; i++) //共26英文字母要填入
+    for (i = 0; i < 26; i++) //共26英文字母要填入
     {
         int a = 0, b = 0, c = 0, d = 0; //旗標變數，分別代表4個不同方向，若為0表示尚未嘗試填入。
         if (!(i))                       //若第一次填
@@ -116,9 +116,10 @@ int generate_random_walk(char my_map[10][10]) //取得亂數地圖的函式
 void print_array(char my_map[10][10])
 {
     //格式化輸出地圖
-    for (int i = 0; i < 10; i++) //行
+    int i, j;
+    for (i = 0; i < 10; i++) //行
     {
-        for (int j = 0; j < 9; j++) //列
+        for (j = 0; j < 9; j++) //列
         {
             printf("%c ", my_map[i][j]); //輸出地圖值
         }
@@ -129,7 +130,10 @@ int main(int argc, char *argv[])
 {
     char my_map[10][10];         //總地圖陣列
     srand((unsigned)time(NULL)); //產生亂數種子
-    while (!(generate_random_walk(my_map))){} //不斷嘗試
-    print_array(my_map);//印出結果
+    while (!(generate_random_walk(my_map)))
+    {
+        ;
+    }                    //不斷嘗試
+    print_array(my_map); //印出結果
     return 0;
 }

@@ -55,8 +55,8 @@ int selection_sort(int data[MAX_INPUT_LENGTH], int n)
     {
         return 0;
     }
-    int max = n - 1;                //定義基底是函數最後項
-    for (int i = 0; i < n - 1; i++) //在頭到尾前一項執行判斷
+    int max = n - 1,i;                //定義基底是函數最後項
+    for (i = 0; i < n - 1; i++) //在頭到尾前一項執行判斷
     {
         if (data[i] > data[max]) //如果某項大於當前最大項
         {
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
         size:輸入的資筆數
         data:儲存輸入的數字們
     */
-    int size = 0, data[MAX_INPUT_LENGTH];
+    int size = 0, data[MAX_INPUT_LENGTH],i;
     char c;
     while ((size < MAX_INPUT_LENGTH) && ((c = getchar()) != '\n')) //限制不要讀取超過筆數限制且非最後項
     {
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
     }
     selection_sort(data, size);        //以使用遞迴的選擇排序法排序陣列(不建議)
     printf("Sorted list: ");           //顯示輸出訊息
-    for (int i = 0; i < size - 1; i++) //將結果輸出但保留最後位
+    for (i = 0; i < size - 1; i++) //將結果輸出但保留最後位
     {
         printf("%d ", data[i]);
     }
