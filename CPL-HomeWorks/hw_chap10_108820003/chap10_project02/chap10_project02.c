@@ -3,10 +3,13 @@
 /* Author: 林天佑                                                 */
 /* ID: 108820003                                                 */
 /* Date: 2019.11.17                                              */
-/* Purpose: 就算你要我抄10.5的程式碼我還是要全部自己寫。誰跟你抄？這樣會進步？
+/* Purpose: 程式碼我一定要全部自己寫，寧願因此被扣分！                  */
 /* Purpose: 別擔心。我依然按照著題目的要求在寫，只是過程不同而已。        */
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
+
+//@->注意，本題寫法與10_3完全不同，且使用13x4陣列來儲存手牌。
+
 #include <stdio.h>
 #include <string.h>
 /*
@@ -152,10 +155,7 @@ int analyze_hand()
             int tmp_j = 0; //暫存該數字被唯一拿在手上的花色位置的變數
             while (!(card[i][tmp_j++]))
                 ; //找到是哪個花色拿在手上
-
-            /*
-                判斷順，連續五張數字連續叫做順，包括10JQKA，但不包括JQKA2,QKA23,KA234
-            */
+            //判斷順，連續五張數字連續叫做順，包括10JQKA，但不包括JQKA2,QKA23,KA234
             if ((c.straight[0] == -1) || (c.straight[0] == i - 1) || ((c.straight[0] == 0) && i == 9))
             {
                 /*
@@ -167,7 +167,6 @@ int analyze_hand()
                 c.straight[0] = i;
                 c.straight[1]++;
             }
-
             //判斷同花，連續五張花色一樣叫做同花
             if ((c.flush[0] == -1) || (c.flush[0] == tmp_j))
             {
