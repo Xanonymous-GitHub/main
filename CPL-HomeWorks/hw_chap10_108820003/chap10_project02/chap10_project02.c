@@ -3,7 +3,8 @@
 /* Author: 林天佑                                                 */
 /* ID: 108820003                                                 */
 /* Date: 2019.11.17                                              */
-/* Purpose: Be the best student.                                 */
+/* Purpose: 就算你要我抄10.5的程式碼我還是要全部自己寫。誰跟你抄？這樣會進步？
+/* Purpose: 別擔心。我依然按照著題目的要求在寫，只是過程不同而已。        */
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
 #include <stdio.h>
