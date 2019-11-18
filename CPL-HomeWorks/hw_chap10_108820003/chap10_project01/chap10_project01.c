@@ -8,8 +8,7 @@
 /*****************************************************************/
 #include <stdio.h>
 #define MAX_LEN 100 //定義stack大小
-int push(char *data, int *top, char obj, int *special_situation)
-{
+int push(char *data, int *top, char obj, int *special_situation) {
     /*  Stack::push,將新資料放至堆疊頂端
         *data:資料陣列(指標)
         *top:頂端位置(指標)
@@ -25,8 +24,7 @@ int push(char *data, int *top, char obj, int *special_situation)
     data[++(*top)] = obj; //將新物件放至堆疊頂端
     return 1;
 }
-char pop(char *data, int *top, int *special_situation)
-{
+char pop(char *data, int *top, int *special_situation) {
     /*  Stack::pop,將頂層資料取出
         *data:資料陣列(指標)
         *top:頂端位置(指標)
@@ -41,8 +39,7 @@ char pop(char *data, int *top, int *special_situation)
     }
     return data[(*top)--]; //回傳自堆的頂端取下的項並將頂層位置往下設定
 }
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     printf("Enter parentheses and/or braces : "); //顯示輸入訊息
     /*
         Top:頂端位置
@@ -53,8 +50,7 @@ int main(int argc, char *argv[])
     */
     int Top = -1, result = 1, special_situation = 0;
     char Stack[MAX_LEN], c;
-    while (result && !(special_situation) && (c = getchar()) != '\n')
-    {
+    while (result && !(special_situation) && (c = getchar()) != '\n') {
         /*
             當以下條件成立時，就向後讀取字元並進行判斷
             1.目前為止括號均有左右對應(包含無)
@@ -64,21 +60,18 @@ int main(int argc, char *argv[])
         if (c == '(' || c == '{') //若此字元為左系列括號
         {
             push(&Stack[0], &Top, c, &special_situation); //將此字元嘗試放至堆疊頂端
-        }
-        else if (c == '}' || c == ')') //若此字元為右系列括號
+        } else if (c == '}' || c == ')')                  //若此字元為右系列括號
         {
             switch (c) //判斷是哪種括號
             {
             case '}':
-                if (pop(&Stack[0], &Top, &special_situation) != '{')
-                {
+                if (pop(&Stack[0], &Top, &special_situation) != '{') {
                     //如果取下堆疊頂層物件後，發現並非對稱括號
                     result = 0; //標記左右對應失敗
                 }
                 break;
             case ')':
-                if (pop(&Stack[0], &Top, &special_situation) != '(')
-                {
+                if (pop(&Stack[0], &Top, &special_situation) != '(') {
                     //如果取下堆疊頂層物件後，發現並非對稱括號
                     result = 0; //標記左右對應失敗
                 }
@@ -91,9 +84,7 @@ int main(int argc, char *argv[])
         if (result && Top == -1) //如果左右對應成功(堆疊為空)
         {
             printf("Parentheses/braces are nested properly\n"); //顯示表示左右對應成功訊息
-        }
-        else
-        {
+        } else {
             printf("Parentheses/braces are NOT nested properly\n"); //顯示表示左右對應不成功訊息
         }
     }
