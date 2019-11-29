@@ -1,4 +1,4 @@
-with open('/home/xanonymous/vscode/main/python/example.txt', 'r') as f:
+with open('example.txt', 'r') as f:
     data = f.read().split('\n')
 count_list = list()
 for x in set(data):
