@@ -23,30 +23,30 @@ class Message():
 
 */
 
-class Message {
-  var __mix;
-  String __time;
-  String __text;
-  Message(String mix) {
-    this.__mix = mix;
-    [this.__time, this.__text] = this.Separate(this.__mix);
-    var response=this.Separate(this.__mix);
-    this.__time=response[0];
-  }
-  List<int> Separate(String data) {
-    List<int> num = [];
-    int c = 0;
-    for (int i = 0; i < 10; i++) {
-      num.add(i);
-    }
-    while (num.contains(data[c])) {
-      c++;
-    }
-    return [this.__mix.sublist(0, c), this.__mix.sublist(c + 1)];
-  }
+// class Message {
+//   var __mix;
+//   String __time;
+//   String __text;
+//   Message(String mix) {
+//     this.__mix = mix;
+//     [this.__time, this.__text] = this.Separate(this.__mix);
+//     var response=this.Separate(this.__mix);
+//     this.__time=response[0];
+//   }
+//   List<int> Separate(String data) {
+//     List<int> num = [];
+//     int c = 0;
+//     for (int i = 0; i < 10; i++) {
+//       num.add(i);
+//     }
+//     while (num.contains(data[c])) {
+//       c++;
+//     }
+//     return [this.__mix.sublist(0, c), this.__mix.sublist(c + 1)];
+//   }
 
-  bool Isread() {}
-}
+//   bool Isread() {}
+// }
 
 class President{
   void Swimming(){
