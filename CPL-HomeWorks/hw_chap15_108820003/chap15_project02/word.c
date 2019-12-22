@@ -1,5 +1,7 @@
 #include "word.h"
 #include <stdio.h>
+#include <string.h>
+#define MAX_WORD_LEN 20
 int read_char(void) {
     int ch = getchar();
     if (ch == '\n' || ch == '\t')
@@ -16,4 +18,6 @@ void read_word(char *word, int len) {
         ch = read_char();
     }
     word[pos] = '\0';
+    if (strlen(word) > MAX_WORD_LEN)
+        word[MAX_WORD_LEN] = '*';
 }

@@ -2,7 +2,7 @@
 /* Class: Computer Programming, Fall 2019                        */
 /* Author: 林天佑                                                 */
 /* ID: 108820003                                                 */
-/* Date: 2019.                                              */
+/* Date: 2019.12.22                                              */
 /* Purpose: Be the best student.                                 */
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
@@ -12,22 +12,18 @@
 #define MAX_WORD_LEN 20
 int main(int argc, char *argv[]) {
     char word[MAX_WORD_LEN + 2];
-    int word_len;
     clear_line();
     for (;;) {
-        read_word(word, MAX_WORD_LEN + 1);
-        word_len = strlen(word);
-        if (word_len == 0) {
-            flush_line();
+        read_word(word, MAX_WORD_LEN + 1); //讀字
+        if (strlen(word) == 0) {
+            flush_line(); //沒字，停
             return 0;
         }
-        if (word_len > MAX_WORD_LEN)
-            word[MAX_WORD_LEN] = '*';
-        if (word_len + 1 > space_remaining()) {
-            write_line();
-            clear_line();
+        if (strlen(word) + 1 > space_remaining()) {
+            write_line(); //寫字
+            clear_line(); //擦字
         }
-        add_word(word);
+        add_word(word); //加字
     }
     return 0;
 }
