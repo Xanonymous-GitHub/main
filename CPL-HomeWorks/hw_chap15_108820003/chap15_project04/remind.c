@@ -2,7 +2,7 @@
 /* Class: Computer Programming, Fall 2019                        */
 /* Author: 林天佑                                                 */
 /* ID: 108820003                                                 */
-/* Date: 2019.                                              */
+/* Date: 2019.12.22                                              */
 /* Purpose: Be the best student.                                 */
 /* GitHub:  https://github.com/Xanonymous-GitHub/main/tree/HW    */
 /*****************************************************************/
