@@ -3,12 +3,6 @@ from abc import ABC, abstractmethod
 
 class Students():
 
-    __last_name = str()
-    __first_name = str()
-    __telephone = str()
-    __department = str()
-    __score = int()
-
     def __init__(self, last_name="", first_name="", telephone="", department="", score=-1):
         self.__last_name = last_name
         self.__first_name = first_name
