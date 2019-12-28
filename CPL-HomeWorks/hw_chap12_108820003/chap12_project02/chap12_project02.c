@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     for (j = i - 2; j + 1; j--)sprintf(&cc[l++], "%c", c[j]); //輸出相反
     for (j = 0; j < i - 1; j++)//比較字串
     if (c[j] != cc[j])k = 0;//不一樣就拉倒
-    if (k)printf("Palindrome");//是回文
-    else printf("Not a Palindrome");//不是回文
+    if (k)printf("Palindrome\n");//是回文
+    else printf("Not a Palindrome\n");//不是回文
     return 0;
 }
