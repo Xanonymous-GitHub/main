@@ -1,0 +1,2 @@
+d = list(map(int, input().split()))
+print(' Max=',max(d),'\n','Min=', min(d),'\n','From big to small-> ', ' '.join(list(map(str, sorted(d, reverse=True)))),'\n','From small to big-> ', ' '.join(list(map(str, sorted(d)))))

@@ -1,3 +1,7 @@
+# Xanonymous Main GitHub Repo.
+![Main Photo](./src/main.jpg)
+## Author: TeU Lin [NTUT](https://www.ntut.edu.tw) [NPC](https://npc.ntut.club/) <trusaidlin@gmail.com>
+
 # <span style="color:purple;font-size:50px">**Xanonymous Main GitHub Repo**</span> **HW**
 
 ## Original repo from <https://github.com/Xanonymous-GitHub/main>

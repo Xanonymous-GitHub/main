@@ -1,0 +1,44 @@
+#main-container {
+  border: black;
+}
+#center-group {
+  border: black;
+  border-style: outset;
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.left {
+  margin-left: 0px;
+  position: absolute;
+  left: 0px;
+  text-align: left;
+}
+.right {
+  margin-right: 0px;
+  position: fixed;
+  right: 0px;
+  text-align: right;
+}
+.nooutline {
+  padding: 0em;
+  margin: 0em;
+  border: 0em;
+}
+hr {
+  margin-top: 1px;
+}
+.center {
+  margin: auto;
+  text-align-last: center;
+  text-align: center;
+}
+ol {
+  list-style-position: inside;
+}
