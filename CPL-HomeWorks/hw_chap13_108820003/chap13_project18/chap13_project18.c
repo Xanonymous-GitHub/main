@@ -13,6 +13,6 @@ int main(int argc, char *argv[]) {
     const char *mm[] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     printf("Enter a date (mm/dd/yyyy):");//顯示輸入訊息
     scanf("%d/%d/%d", &m, &d, &y);//讀取輸入
-    printf("You entered the date %s %.2d, %d", mm[(m - 1) % 12], d, y);//顯示答案
+    printf("You entered the date %s %.2d, %d\n", mm[(m - 1) % 12], d, y);//顯示答案
     return 0;
 }

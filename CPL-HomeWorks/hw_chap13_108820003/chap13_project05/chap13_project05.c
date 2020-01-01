@@ -12,6 +12,6 @@ int main(int argc, char *argv[]) {
     int sum = 0; //定義加總為零
     for (; argc - 1;)
     sum += atoi(argv[--argc]); //將神之指令轉成數字加入加總變數
-    printf("%d\n", sum);           //列出加總
+    printf("Total: %d\n", sum);           //列出加總
     return 0;
 }
