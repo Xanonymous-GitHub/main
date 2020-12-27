@@ -120,6 +120,10 @@ int main(void) {
         break;
     } while (pos.row != 0 || pos.col != col_size - 1);
 
+    // reduce history.
+    free(history->items);
+    free(history);
+
     // print answer.
     if (!no_way) {
         // insert a gap.
