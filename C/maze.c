@@ -5,10 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/** @attention
- * define the expected max positive range of column and row.
- * if the data is not in this range, just change here to expand them.
-*/
 #define INT u_int8_t
 #define DIE "No Way"
 
@@ -116,13 +112,19 @@ int main(void) {
             continue;
         }
 
-        // mark as no-way.
-        no_way = 1;
+        if (row_size != 1 || col_size != 1) {
+            // mark as no-way.
+            no_way = 1;
+        }
+
         break;
     } while (pos.row != 0 || pos.col != col_size - 1);
 
     // print answer.
     if (!no_way) {
+        // insert a gap.
+        printf("\n");
+
         // mark final point to a passed point.
         maze[0][col_size - 1] = '2';
 
@@ -140,7 +142,7 @@ int main(void) {
         for (i = 0; i < row_size; i++) {
             printf("%s\n", maze[i]);
         }
-        
+
     } else {
         printf(DIE);
     }
